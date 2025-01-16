@@ -13,7 +13,7 @@ export const metadata = {
 };
 
 export default function Page({ searchParams }) {
-  // const filter = searchParams?.capacity ?? "all";
+  const filter = searchParams?.capacity ?? "all";
 
   return (
     <div>
@@ -35,7 +35,7 @@ export default function Page({ searchParams }) {
 
       <Suspense fallback={<Spinner />} key={filter}>
         <CabinList filter={filter} />
-        <ReservationReminder />
+        {/* <ReservationReminder /> */}
       </Suspense>
     </div>
   );
